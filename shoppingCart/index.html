@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1999d01b44.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <section class="checkout a-popup" id="checkoutWindow">
+        <ul class="checkout__list">
+            <li class="checkout__listItem">
+                <img class="checkout__image" src="img/tijger.webp" alt="">
+                <p class="checkout__title">tijger</p>
+                <p id="js--tijger" class="checkout__amount"></p>
+            </li>
+            <li class="checkout__listItem">
+                <img class="checkout__image" src="img/stitch.webp" alt="">
+                <p class="checkout__title">stitch</p>
+                <p id="js--stitch" class="checkout__amount"></p>
+            </li>
+            <li class="checkout__listItem">
+                <img class="checkout__image" src="img/edna.webp" alt="">
+                <p class="checkout__title">edna</p>
+                <p id="js--edna" class="checkout__amount"></p>
+            </li>
+        </ul>
+    </section>
+
+    <article class="modal" id="js--shoppingModal">✔added to cart</article>
+    <button class="shoppingCart" id="checkoutButton">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-solid fa-arrow-left" style="display: none;"></i>
+        <div class="shoppingCart__message">0</div>
+    </button>
+    <main>
+        <ul class="bedels">
+            <li class="bedels__bedel a-popup">
+                <figure class="bedels__figure">
+                    <img class="bedels__image" src="img/tijger.webp" alt="">
+                </figure>
+                <section class="bedels__body">
+                    <h2 class="bedels__h2">€90</h2>
+                    <h3 class="bedels__h3">tijger - Disney</h3>
+                    <div class="bedels__stars">★★★★★</div>
+                    <button data-product="tijger" class="bedels__button">Add to cart</button>
+                </section>
+            </li>
+            <l class="bedels__bedel a-popup">
+                <figure class="bedels__figure">
+                    <img class="bedels__image" src="img/stitch.webp" alt="">
+                </figure>
+                <section class="bedels__body">
+                    <h2 class="bedels__h2">€90</h2>
+                    <h3 class="bedels__h3">stitch - Disney</h3>
+                    <div class="bedels__stars">★★★★★</div>
+                    <button data-product="stitch" class="bedels__button">Add to cart</button>
+                </section>
+            </l>
+            <li class="bedels__bedel bedels__bedel--third a-popup">
+                <figure class="bedels__figure">
+                    <img class="bedels__image" src="img/edna.webp" alt="">
+                </figure>
+                <section class="bedels__body">
+                    <h2 class="bedels__h2">€90</h2>
+                    <h3 class="bedels__h3">edna - Disney</h3>
+                    <div class="bedels__stars">★★★★★</div>
+                    <button data-product="edna" class="bedels__button">Add to cart</button>
+                </section>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>

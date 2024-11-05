@@ -1,0 +1,237 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bedel-background: #F6F6F6;
+    --gradient: linear-gradient(to left, #eef2f3, #F2EAD3);
+
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+button:hover{
+    cursor: pointer !important;
+}
+
+body{
+    font-family: 'Lato',sans-serif;
+    font-size: 2rem;   
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    padding: 4rem;
+    background: var(--gradient);
+    
+}
+
+.checkout{
+    width: 70%;
+    height: 80%;
+    background: var(--bedel-background);
+    padding: 4rem;
+    display: none;
+}
+
+.checkout__list{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 20rem);
+}
+
+.checkout__listItem{
+    list-style: none;
+    grid-row: span 1;
+    border-bottom: .3rem solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout__image{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.modal{
+    width: 50rem;
+    height: 30rem;
+    position: fixed;
+    top: 20%;
+    background: #f6f6f6;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.3);
+    color: green;
+    font-size: 130%;
+    font-weight: 400;
+    border-radius: .5rem;
+}
+
+.shoppingCart{
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    background: black;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 100%;
+}
+.shoppingCart:hover{
+    cursor: pointer;
+}
+
+.shoppingCart__message{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    border: white .2rem solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gradient);
+}
+
+main{
+    width: 60%;
+    height: 100%;
+}
+
+.bedels{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50rem 50rem;
+    gap: 2rem;
+}
+
+.bedels__bedel{
+    list-style: none;
+    background: var(--bedel-background);
+    border-radius: .5rem;
+}
+
+.bedels__bedel--third{
+    grid-column: span 2;
+}
+
+.bedels__figure{
+    width: 100%;
+    height: 60%;
+}
+
+.bedels__image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bedels__body{
+    padding: 0 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.bedels__h2{
+    font-size: 300%;
+    font-weight: 700;
+}
+
+.bedels__h3{
+    font-size: 120%;
+    font-weight: 400;
+}
+
+.bedels__stars{
+    color: gold;
+    font-size: 130%;
+}
+
+.bedels__button{
+    width: 20rem;
+    border: none;
+    font-size: 90%;
+    color: white;
+    background: black;
+    padding: 1rem 2rem;
+}
+
+.a-popup{
+    animation-name: popup;
+    animation-duration: .8s;
+    animation-fill-mode: backwards;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popup {
+    from{
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (max-width: 62.5rem) {
+    body{
+        padding: 0;
+    }
+    main{
+        padding: 2rem;
+        width: 100%;
+    }
+    .bedels{
+        grid-template-columns: 100%;
+        grid-template-rows: 65rem 65rem 65rem;
+        gap: 1rem;
+    }
+    .bedels__bedel--third{
+        grid-column: 1;
+    }
+    .modal{
+        width:calc(100% - 2rem);
+    }
+    .checkout{
+        margin: 2rem;
+        width: 100%;
+    }
+    
+    .checkout__list{
+        grid-template-rows: repeat(3, 45rem);
+    }
+    .checkout__listItem{
+        flex-direction: column;
+        gap: .5rem;
+        padding-bottom: 2rem;
+    }
+
+    .checkout__image{
+        height: 80%;
+        width: 100%;
+    }
+
+    .a-popup{
+        animation-name: "broken";
+        animation-duration: 0s;
+    }
+}
