@@ -1,0 +1,22 @@
+@media screen and (max-width: 62.5rem){
+    .colors{
+        &__color{
+            width: 14rem;
+
+            &:hover .colors__circle{
+                transform: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 50rem){
+    body{
+        padding: 2;
+    }
+    .colors{
+        &__color{
+            width: 12rem;
+        }
+    }
+}
