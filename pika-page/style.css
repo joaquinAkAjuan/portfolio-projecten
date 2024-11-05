@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2rem;
+    font-family: sans-serif;
+    background: rgb(255, 255, 255);
+    padding: 2rem;
+}
+
+.cards {
+    height: 89vh;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    list-style: none;
+    background: rgb(0, 183, 255);
+    border-radius: 1rem;
+    box-shadow: black;
+}
+
+.card--first {
+    grid-row: 1 / 5;
+    grid-column: 1 / 6;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.card--first > input {
+    width: 70%;
+    height: 4rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    padding-left: 1rem;
+}
+
+.card--second {
+    grid-row: 1 / 7;
+    grid-column: 6 / 16;
+    padding: 2rem;
+}
+
+.card--second > h2 {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+}
+
+.card--second > h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.card--third {
+    grid-row: 5 / 11;
+    grid-column: 1 / 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    gap: 0.2rem;
+}
+
+.card--third > img {
+    width: 17rem;
+    height: 20rem;
+}
+
+.card--third > h2 {
+    font-size: 2rem;
+}
+
+.card--third > button {
+    width: 15rem;
+    height: 6rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    border: none;
+    background: red;
+    color: #eee;
+    border-radius: 0.5rem;
+}
+
+.card--fourth {
+    grid-row: 7 / 11;
+    grid-column: 6 / 16;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.card--fourth > h2 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    
+}
+
+
+.card--fifth {
+    grid-row: 11 / 17;
+    grid-column: 10 / 16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem;
+
+}
+
+
+.card--fifth > h2 {
+    font-size: 2rem;
+}
+
+
+.card--sixth {
+    grid-row: 11 / 17;
+    grid-column: 1 / 10;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card--sixth > h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 1rem;
+      height: auto;
+    }
+  
+    .card--first {
+      grid-row: auto;
+      grid-column: auto;
+      padding: 2rem;
+    }
+  
+    .card--second {
+      grid-row: auto;
+      grid-column: auto;
+      padding: 2rem;
+    }
+  
+    .card--third {
+      grid-row: auto;
+      grid-column: auto;
+      padding: 2rem;
+    }
+  
+    .card--fourth {
+      grid-row: auto;
+      grid-column: auto;
+      padding: 2rem;
+    }
+  
+    .card--fifth {
+      grid-row: auto;
+      grid-column: auto;
+      padding: 2rem;
+    }
+  
+    .card--sixth {
+      grid-row: auto;
+      grid-column: auto;
+      padding: 2rem;
+    }
+  
+    .card--second > h2 {
+      font-size: 3rem;
+    }
+  
+    .card--fourth > h2 {
+      font-size: 3rem;
+    }
+  
+    html {
+      font-size: 50%;
+    }
+  
+    body {
+      font-size: 1.6rem;
+      padding: 2rem;
+    }
+  
+    .card--first > input {
+      width: 100%;
+      height: 3rem;
+      font-size: 1.6rem;
+      padding-left: 0.5rem;
+    }
+  
+    .card--first > h2 {
+      font-size: 3rem;
+    }
+  
+    .card--first > h3 {
+      font-size: 1.6rem;
+    }
+  
+    .card--third > img {
+      width: 12rem;
+      height: 14rem;
+    }
+  
+    .card--third > h2 {
+      font-size: 1.6rem;
+    }
+  
+    .card--third > button {
+      width: 12rem;
+      height: 4rem;
+      font-size: 1.6rem;
+    }
+  
+    .card--fourth > h3 {
+      font-size: 1.6rem;
+    }
+  
+    .card--fifth > h2 {
+      font-size: 1.6rem;
+    }
+  
+    .card--sixth > h2 {
+      font-size: 3rem;
+    }
+  
+    .card--sixth > h3 {
+      font-size: 1.6rem;
+    }
+  }
